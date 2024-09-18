@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+    }
+    #results {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Box</h1>
+  <input type="text" id="search-input" placeholder="Search for something..." />
+  <button onclick="performSearch()">Search</button>
+  <div id="results"></div>
+
+  <script>
+    function performSearch() {
+      const query = document.getElementById("search-input").value;
+      document.getElementById("results").innerHTML = `You searched for: <b>${query}</b>`;
+    }
+  </script>
+</body>
+</html>
